@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type=button]
+{
+    cursor: pointer;
+}
+
+#keyvalue_title
+{
+    position: absolute;
+    font-size: 3em;
+    display: none;
+    width: 50%;
+    left: 25%;
+    top: 6vh;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+}
+
+#set_title
+{
+    position: absolute;
+    font-size: 3em;
+    display: none;
+    width: 50%;
+    left: 25%;
+    top: 6vh;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+}
+
+#sort_title
+{
+    position: absolute;
+    font-size: 3em;
+    display: none;
+    width: 50%;
+    left: 25%;
+    top: 6vh;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: white;
+}
+
+#main_popup
+{
+
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(12,0,67,.4);
+}
+
+#popup
+{
+    position: absolute;
+    width: 30%;
+    height: 25vh;
+    top:10vh;
+    left: 35%;
+    background-color: seagreen;
+    z-index: 999;
+    padding: 3vh;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Franklin Gothic Medium Cond", "Droid Sans", sans-serif;
+    color: white;
+    border-radius: 20% 20%;
+    border: 2px solid black;
+}
+
+#popup > p > input
+{
+    width: 20%;
+    margin-top: -1vh;
+}
+
+.input_margin
+{
+    width: 30%;
+    padding-left: 10%;
+}
+
+#popup > p
+{
+    padding-bottom: 3vh;
+}
+
+.btn_popup
+{
+    width: 35%;
+    height: 4vh;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: .6em;
+
+}
+
+#choose
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 5vh;
+    font-size: 4em;
+}
+
+
+#set_choose
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 5vh;
+    font-size: 4em;
+}
+
+#sort_choose
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 5vh;
+    font-size: 4em;
+}
+
+#set_choose_hash
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#set_choose_tree
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#sort_choose_tree
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_hash
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_tree
+{
+    display: none;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_functionality
+{
+    display: none;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 20vh;
+    height: 65vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding: 3vh 0;
+    font-size: 4em;
+}
+
+#choose_typeof_keyvalue
+{
+    display: none;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 20vh;
+    height: 65vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_typeof_set
+{
+    display: none;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 20vh;
+    height: 65vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_typeof_sorting
+{
+    display: none;
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top: 20vh;
+    height: 65vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#choose_typeof_sorting > .btns
+{
+    margin-top: 8vh;
+}
+
+#custom
+{
+    display: none;
+}
+
+body
+{
+    background-color: #0c2030;
+}
+
+#title
+{
+    position: relative;
+    width: 40%;
+    left: 30%;
+    top: 20vh;
+    height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    padding-top: 10vh;
+    font-size: 4em;
+}
+
+#start
+{
+    cursor: pointer;
+    width: 50%;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-bottom: 3vh;
+    margin-top: 10vh;
+    font-size: .8em;
+}
+
+.btns
+{
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+.btn
+{
+    float: left;
+    width: 35%;
+    height: 7vh;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5vh 0 0 10%;
+    font-size: .3em;
+}
+
+.btn2
+{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.btn3
+{
+    width: 35%;
+}
+
+#empty_list
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 20vh;
+    min-height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 2em;
+    padding-top: 3vh;
+}
+
+#set_list
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 20vh;
+    min-height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 2em;
+    padding-top: 3vh;
+}
+
+#sort_list
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 20vh;
+    min-height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 2em;
+    padding-top: 3vh;
+}
+
+#empty_hash
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 20vh;
+    min-height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 2em;
+    padding-top: 3vh;
+}
+
+#empty_hash > p
+{
+    margin-bottom: 3vh;
+    font-size: 2em;
+}
+
+#set_list > p
+{
+    /*margin-bottom: 3vh;*/
+    font-size: 2em;
+}
+
+#sort_list > p
+{
+    /*margin-bottom: 3vh;*/
+    font-size: 2em;
+}
+
+#empty_list > p
+{
+    /*margin-top: 3vh;*/
+    font-size: 2em;
+}
+
+.oper_btns
+{
+
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin-bottom: 10vh;
+}
+
+.oper_btn
+{
+    float: left;
+    width: 35%;
+    height: 6vh;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 4vh 0 0 10%;
+    font-size: .45em;
+    padding: 1vh 5%;
+
+}
+
+#time_measure
+{
+    display: none;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 20vh;
+    min-height: 60vh;
+    background-color: darkgray;
+    text-align: center;
+    color: black;
+    font-family: "Franklin Gothic Book", sans-serif;
+    font-size: 2em;
+}
+
+#time_measure > p
+{
+    margin-top: 10vh;
+    font-size: 1.3em;
+}
+
+.time_btn
+{
+    width: 30%;
+    margin: 4vh 0 0 3%;
+}
+
+.time_btns
+{
+    margin-top: 10vh;
+}
+
+.other_list
+{
+    position: absolute;
+    right: 2%;
+    top: -2vh;
+    width: 25%;
+    height: 4vh;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 4vh 0 0 10%;
+    font-size: .45em;
+    padding: 1vh 5%;
+}
+
+.fnt {
+    font-size: 15px;
+}
+
+.wdth
+{
+    width: 40%;
+}
+
+#other_realiz
+{
+    font-family: sans-serif;
+    text-align: center;
+    /*font-size: 20px;*/
+}

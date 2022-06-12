@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Algorithms/splaytree.js"></script>
+    <script src="Algorithms/bplustree.js"></script>
+    <script src="Algorithms/quadratichash.js"></script>
+    <script src="Algorithms/sorts.js"></script>
+    <script src="Algorithms/cycledlist.js"></script>
+    <script src="patterns.js"></script>
+    <script src="Algorithms/subjectarea.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p id="keyvalue_title">Контейнер 'Ключ-значення'</p>
+<p id="set_title">Множина</p>
+<p id="sort_title">Сортування</p>
+
+<div id="main_popup">
+    <div id="popup">
+        <p>
+            Введіть значення
+            <input type="text" id="elmnt">
+        </p>
+        <p>
+            Введіть ключ
+            <input type="number" id="index">
+        </p>
+        <button class="btn_popup" id="btn_popup">OK</button>
+    </div>
+</div>
+
+<div id="title">
+    ООП Іспит<br>
+    <input type="button" value="СТАРТ" id="start">
+</div>
+
+<div id="choose_functionality">
+    Оберіть функціональність<br>
+    <div class="btns">
+        <input type="button" value="Контейнер 'Ключ-значення'" id="key_value" class="btn btn2">
+        <input type="button" value="Множина" id="set" class="btn btn2">
+        <input type="button" value="Сортування" id="sorting" class="btn btn2">
+    </div>
+</div>
+
+<div id="choose_typeof_keyvalue">
+    <input type="button" id="other_func" class="other_list fnt wdth" value="Інша функціональність">
+    Оберіть реалізацію<br>
+    <div class="btns">
+        <input type="button" value="На основі списку" id="keyvalue_list_based" class="btn btn2">
+        <input type="button" value="На основі хeш-таблиці" id="keyvalue_hash_based" class="btn btn2">
+        <input type="button" value="На основі Splay-дерева" id="keyvalue_tree_based" class="btn btn2">
+    </div>
+</div>
+
+<div id="choose_typeof_set">
+    <input type="button" id="set_other_func" class="other_list fnt wdth" value="Інша функціональність">
+    Оберіть реалізацію<br>
+    <div class="btns">
+        <input type="button" value="На основі списку" id="set_list_based" class="btn btn2">
+        <input type="button" value="На основі хeш-таблиці" id="set_hash_based" class="btn btn2">
+        <input type="button" value="На основі B+-дерева" id="set_tree_based" class="btn btn2">
+    </div>
+</div>
+
+<div id="choose_typeof_sorting">
+    <input type="button" id="sort_other_func" class="other_list fnt wdth" value="Інша функціональність">
+    Оберіть реалізацію<br>
+    <div class="btns">
+        <input type="button" value="На основі списку" id="sort_list_based" class="btn btn2">
+        <input type="button" value="На основі Splay-дерева" id="sort_tree_based" class="btn btn2">
+    </div>
+</div>
+
+<div id="sort_choose">
+    <input type="button" id="sort_other_realiz" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип циклічного однозв'язного списка<br>
+    <div class="btns">
+        <input type="button" value="Пустий список" id="sort_empty_list_choose" class="btn">
+        <input type="button" value="Довільний список" id="sort_random_list" class="btn">
+        <input type="button" value="Предметний список" id="sort_cstm_list" class="btn">
+        <input type="button" value="Свій список" id="sort_own_list" class="btn">
+    </div>
+</div>
+
+<div id="sort_choose_tree">
+    <input type="button" id="sort_other_realiz_tree" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип Splay-дерева<br>
+    <div class="btns">
+        <input type="button" value="Пусте Splay-дерево" id="sort_empty_tree_choose" class="btn btn3">
+        <input type="button" value="Довільне Splay-дерево" id="sort_random_tree" class="btn btn3">
+        <input type="button" value="Предметне Splay-дерево" id="sort_cstm_tree" class="btn btn3">
+        <input type="button" value="Свое Splay-дерево" id="sort_own_tree" class="btn btn3">
+    </div>
+</div>
+
+<div id="set_choose">
+    <input type="button" id="set_other_realiz" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип циклічного однозв'язного списка<br>
+    <div class="btns">
+        <input type="button" value="Пустий список" id="set_empty_list_choose" class="btn">
+        <input type="button" value="Довільний список" id="set_random_list" class="btn">
+        <input type="button" value="Предметний список" id="set_cstm_list" class="btn">
+        <input type="button" value="Свій список" id="set_own_list" class="btn">
+    </div>
+</div>
+
+<div id="set_choose_hash">
+    <input type="button" id="set_other_realiz_hash" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип хеш-таблиці<br>
+    <div class="btns">
+        <input type="button" value="Пуста хеш-таблиця" id="set_empty_hash_choose" class="btn btn3">
+        <input type="button" value="Довільна хеш-таблиця" id="set_random_hash" class="btn btn3">
+        <input type="button" value="Предметна хеш-таблиця" id="set_cstm_hash" class="btn btn3">
+        <input type="button" value="Своя хеш-таблиця" id="set_own_hash" class="btn btn3">
+    </div>
+</div>
+
+<div id="set_choose_tree">
+    <input type="button" id="set_other_realiz_tree" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип B+-дерева<br>
+    <div class="btns">
+        <input type="button" value="Пусте B+-дерево" id="set_empty_tree_choose" class="btn btn3">
+        <input type="button" value="Довільне B+-дерево" id="set_random_tree" class="btn btn3">
+        <input type="button" value="Предметне B+-дерево" id="set_cstm_tree" class="btn btn3">
+        <input type="button" value="Свое B+-дерево" id="set_own_tree" class="btn btn3">
+    </div>
+</div>
+
+<div id="sort_list">
+    <button id="other_sort" class="other_list">Інший тип</button>
+    <p>Операції</p>
+    <div class="oper_btns">
+        <button class="oper_btn" id="sort_push">Додати елемент</button>
+        <button class="oper_btn" id="sort_up">Сортування по зростанню</button>
+        <button class="oper_btn" id="sort_down">Сортування по спаданню</button>
+        <button class="oper_btn" id="sort_start">Отримати з початку</button>
+        <button class="oper_btn" id="sort_end">Отримати з кінця</button>
+        <button class="oper_btn" id="sort_mid">Отримати з середини</button>
+        <button class="oper_btn" id="sort_pos">Отримати з місця</button>
+        <button class="oper_btn" id="sort_show">Показати множину</button>
+    </div>
+</div>
+
+
+
+<div id="set_list">
+    <button id="other_set" class="other_list">Інший тип</button>
+    <p>Операції</p>
+    <div class="oper_btns">
+        <button class="oper_btn" id="set_push">Додати елемент</button>
+        <button class="oper_btn" id="set_check">Перевірити приналежність</button>
+        <button class="oper_btn" id="set_rem">Видалити елемент</button>
+        <button class="oper_btn" id="set_un">Об'єднання</button>
+        <button class="oper_btn" id="set_sect">Перетин</button>
+        <button class="oper_btn" id="set_tract">Різниця</button>
+        <button class="oper_btn" id="set_symtract">Симетрична різниця</button>
+        <button class="oper_btn" id="set_show">Показати множину</button>
+    </div>
+</div>
+
+<div id="choose">
+    <input type="button" id="other_realiz" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип циклічного однозв'язного списка<br>
+    <div class="btns">
+        <input type="button" value="Пустий список" id="empty_list_choose" class="btn">
+        <input type="button" value="Довільний список" id="random_list" class="btn">
+        <input type="button" value="Предметний список" id="cstm_list" class="btn">
+        <input type="button" value="Свій список" id="own_list" class="btn">
+    </div>
+</div>
+
+<div id="choose_hash">
+    <input type="button" id="other_realiz_hash" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип хеш-таблиці<br>
+    <div class="btns">
+        <input type="button" value="Пуста хеш-таблиця" id="empty_hash_choose" class="btn btn3">
+        <input type="button" value="Довільна хеш-таблиця" id="random_hash" class="btn btn3">
+        <input type="button" value="Предметна хеш-таблиця" id="cstm_hash" class="btn btn3">
+        <input type="button" value="Своя хеш-таблиця" id="own_hash" class="btn btn3">
+    </div>
+</div>
+
+<div id="choose_tree">
+    <input type="button" id="other_realiz_tree" class="other_list fnt" value="Інша реалізація">
+    Оберіть тип Splay-дерева<br>
+    <div class="btns">
+        <input type="button" value="Пусте Splay-дерево" id="empty_tree_choose" class="btn btn3">
+        <input type="button" value="Довільне Splay-дерево" id="random_tree" class="btn btn3">
+        <input type="button" value="Предметне Splay-дерево" id="cstm_tree" class="btn btn3">
+        <input type="button" value="Свое Splay-дерево" id="own_tree" class="btn btn3">
+    </div>
+</div>
+
+
+<div id="empty_list">
+    <button id="other_list" class="other_list">Інший список</button>
+    <p>Операції</p>
+    <div class="oper_btns">
+        <button class="oper_btn" id="push">Додати елемент</button>
+        <button class="oper_btn" id="find_elmnt">Отримати значення за ключем</button>
+        <button class="oper_btn" id="ins_at">Додати значення за ключем</button>
+        <button class="oper_btn" id="rem_ind">Видалити за ключем</button>
+        <button class="oper_btn" id="get_keys">Отримати список ключів</button>
+        <button class="oper_btn" id="get_values">Отримати список значень</button>
+        <button class="oper_btn" id="get_keyvalues">Отримати список пар ключ-значенння</button>
+        <button class="oper_btn" id="time">Порахувати час виконання операцій</button>
+    </div>
+</div>
+
+<div id="empty_hash">
+    <button id="other_hash" class="other_list">Інший тип</button>
+    <p>Операції</p>
+    <div class="oper_btns">
+        <button class="oper_btn" id="hash_push">Додати елемент</button>
+        <button class="oper_btn" id="hash_find_elmnt">Отримати значення за ключем</button>
+        <button class="oper_btn" id="hash_rem_ind">Видалити за ключем</button>
+        <button class="oper_btn" id="hash_get_keys">Отримати список ключів</button>
+        <button class="oper_btn" id="hash_get_values">Отримати список значень</button>
+        <button class="oper_btn" id="hash_get_keyvalues">Отримати список пар ключ-значенння</button>
+    </div>
+</div>
+
+<div id="time_measure">
+    <button id="other_list_time" class="other_list">Інший список</button>
+    <p id="showTime">Час виконання операції: *-------------------* </p>
+
+    <div class="oper_btns time_btns">
+        <p>Операції</p>
+        <button class="oper_btn time_btn" id="time_push">Додати елемент</button>
+        <button class="oper_btn time_btn" id="time_ins_at">Додати значення за ключем</button>
+        <button class="oper_btn time_btn" id="time_rem_ind">Видалити за ключем</button>
+        <button class="oper_btn time_btn" id="time_find_elmnt">Отримати значення за ключем</button>
+    </div>
+</div>
+
+<script src="keyvalue.js"></script>
+<script src="set.js"></script>
+<script src="sorting.js"></script>
+</body>
+</html>
